@@ -12,6 +12,7 @@ edad:number=0;
 registrado=false;
 nombre:string="";
 apellido:string="";
+cargo:string="";
 entradas:any=[];
 
 constructor(){

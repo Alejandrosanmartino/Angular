@@ -3,7 +3,8 @@
 
 Introduce Nombre: <input type="text" name="nombre" [(ngModel)]="nombre"> <br/>
 Introduce Apellido: <input type="text" name="apellido"[(ngModel)]="apellido" > <br/>
-Introduce tu edad: <input type="number" name="edad" [(ngModel)]="edad">
+Introduce tu edad: <input type="number" name="edad" [(ngModel)]="edad"><br/>
+Introduce cargo: <input type="text" name="cargo"[(ngModel)]="cargo" > <br/>
 <br/><br/>
 <input type="submit" value="Registrar" class="btn btn-primary" (click)="registrarUsuario()"> 
 
@@ -11,7 +12,9 @@ Introduce tu edad: <input type="number" name="edad" [(ngModel)]="edad">
 </form>
 <br/>
 
-<h2 *ngIf="registrado; else sinRegistrar ">{{mensaje}} Con el nombre de {{nombre}} {{apellido}}</h2>
+<h2 *ngIf="registrado; else sinRegistrar ">{{mensaje}} Con el nombre de {{nombre}} {{apellido}} y tiene el cargo de 
+    <!-- <span [ngStyle]="{color:cargo=='A2'?'green':'red'}">{{cargo}}</span></h2> -->
+    <span [ngClass]="{paraA2:cargo=='A2'}">{{cargo}}</span></h2>
 
 <ng-template #sinRegistrar>
 
