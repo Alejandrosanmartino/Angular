@@ -40,12 +40,7 @@
 </div>
 
 <br /> <br /> <br />
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div *ngFor="let empleado of empleados; let i=index">
-        {{i+1+":"}}{{empleado.nombre}}{{empleado.apellido}}{{empleado.cargo}}{{empleado.salario}}
-      </div>
-    </div>
-  </div>
-</div>
+<!-- Ahora asignamos dentro de la etiqueta del componente hijo la directiva ngFor además para llamar a esas variables
+que el componente hijo no tiene vamos a hacer lo siguiente [nombre que le queramos dar]="variable del padre" -->
+<app-empleado-hijo-component  *ngFor="let empleado of empleados; let i=index" [empleadoDeLista]="empleado" [variableIndice]="i"></app-empleado-hijo-component>
+
