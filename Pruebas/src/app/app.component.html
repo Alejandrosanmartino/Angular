@@ -1,0 +1,17 @@
+<p >El nombre del empleado es: {{edad==10 ?'el numero es 1131231310':11 }}<p>
+<p>La edad es de {{edad}}</p>
+<p *ngIf="edad>18">Es mayor de edad</p>
+<p *ngFor="let salario of sueldos">{{salario}}</p>
+
+<div>
+  <p>{{edad}}</p>
+  <button (click)="aumentarEdad()">Aumenta</button>
+  <button (click)="decrementarEdad()">Decrementa</button>
+</div>
+<br><br>
+<input type="text" [ngModel]='nombre'>
+
+<!-- <input type="text" [(ngModel)]="nombre"> -->
+<button (click)="mostrarNombre()">Muestra</button>
+
+<p>nombre {{nombre}}</p>
