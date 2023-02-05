@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-dado',
@@ -7,12 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DadoComponent implements OnInit {
 
-  valor:number=1;
+  @Input() valor: string="";
 
-  constructor() { }
-
-  ngOnInit(): void {
-    this.valor = Math.trunc(Math.random()* 6) + 1;
+  ngOnInit() {
 
   }
 
