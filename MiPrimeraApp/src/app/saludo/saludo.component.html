@@ -2,3 +2,7 @@
 
 <p>{{mostrarSaludo()}} </p>
 <p id="{{identifParrafo}}">Párrafo para modificar atributos</p>
+<p>Empresa empleado {{empresa}}</p>
+<!-- Introduce empresa <input type="text" #empresa (keyup)="0" [disabled]="habilitacionCuadro"> -->
+
+Introduce Empresa trabajador <input type="text" [(ngModel)]="empresa">

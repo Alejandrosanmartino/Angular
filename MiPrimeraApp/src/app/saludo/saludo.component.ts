@@ -10,7 +10,8 @@ export class SaludoComponent implements OnInit {
 
 mensaje: string;
 identifParrafo:string;
-
+habilitacionCuadro=false;
+empresa="pepe";
 
   constructor() { 
   this.mensaje="saludos terrícola";
@@ -29,6 +30,8 @@ identifParrafo:string;
 
     return 'Hola este es otro saludo';
   }
+//   cambiaEmpresa(event: Event){
+// this.empresa=(<HTMLInputElement>event.target).value;
 
-
+//   }
 }

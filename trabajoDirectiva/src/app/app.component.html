@@ -1,0 +1,26 @@
+<h3>{{title}}</h3>
+
+<div class="container">
+<form action="">
+introduce nombre <input type="text" name="nombre" [(ngModel)]="nombre">
+<br>
+Introduce edad <input type="number" name="edad" [(ngModel)]="edad">
+<br>
+<input type="button" value="Registrar" (click)="registroUsu()">
+<br><br>
+<div *ngIf="registrado;else sinRegistrar">Usuario Registrado con el nombre de {{nombre}} y la edad de {{edad}}</div>
+<ng-template #sinRegistrar>
+<p>No hay registros</p>
+</ng-template>
+</form>
+</div>
+
+<br>
+<br>
+
+    <ul>
+        <li *ngFor="let entrada of entradas"; let i="index">{{entrada.titulo}}</li>
+
+    </ul>
+
+
