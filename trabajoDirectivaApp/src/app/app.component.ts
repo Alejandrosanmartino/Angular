@@ -33,6 +33,9 @@ registrarUsuario (){
 this.registrado=true;
 this.mensaje = "Usuario registrado con éxito!!";
 
+setTimeout(() => {
+  this.registrado = false;
+  this.mensaje = "";}, 3000);
 }
 
 
